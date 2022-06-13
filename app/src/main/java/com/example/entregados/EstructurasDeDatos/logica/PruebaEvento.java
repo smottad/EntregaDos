@@ -24,7 +24,7 @@ public class PruebaEvento {
 					switch(Opcion1) {
 					case 1:
 						System.out.println();
-						CreacionEvento.IngresarDatos();
+
 						break;
 					
 					case 2:

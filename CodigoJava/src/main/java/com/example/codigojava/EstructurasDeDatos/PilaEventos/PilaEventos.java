@@ -1,6 +1,6 @@
-package com.example.entregados.EstructurasDeDatos.PilaEventos;
+package com.example.codigojava.EstructurasDeDatos.PilaEventos;
 
-import com.example.entregados.EstructurasDeDatos.IU.MenuCrearEvento.DatosEventos;
+import com.example.codigojava.EstructurasDeDatos.IU.MenuCrearEvento.DatosEventos;
 
 import java.util.ArrayList;
 
@@ -10,40 +10,33 @@ public class PilaEventos {
     private NodoPila inicio;
     // Variable para registrar el tamaño de la pila.
     private int tamanio;
-
     /**
      * Constructor por defecto.
      */
-    public void PilaEventos() {
+    public void PilaEventos(){
         inicio = null;
         tamanio = 0;
     }
-
     /**
      * Consulta si la pila esta vacia.
-     *
      * @return true si el primer nodo (inicio), no apunta a otro nodo.
      */
-    public boolean esVacia() {
+    public boolean esVacia(){
         return inicio == null;
     }
-
     /**
      * Consulta cuantos elementos (nodos) tiene la pila.
-     *
      * @return numero entero entre [0,n] donde n es el numero de elementos
      * que contenga la lista.
      */
-    public int getTamanio() {
+    public int getTamanio(){
         return tamanio;
     }
-
     /**
      * Agrega un nuevo nodo a la pila.
-     *
      * @param valor a agregar.
      */
-    public void apilar(DatosEventos valor) {
+    public void apilar(DatosEventos valor){
         // Define un nuevo nodo.
         NodoPila nuevo = new NodoPila();
         // Agrega al valor al nodo.
@@ -54,18 +47,17 @@ public class PilaEventos {
             inicio = nuevo;
         }
         // Caso contrario agrega el nuevo nodo al inicio de la pila.
-        else {
+        else{
             nuevo.setSiguiente(inicio);
             inicio = nuevo;
         }
         // Incrementa el contador del tamaño.
         tamanio++;
     }
-
     /**
      * Elimina el elemento que se encuentra en el tope de la piala.
      */
-    public void retirar() {
+    public void retirar(){
         if (!esVacia()) {
             // Asigna como primer nodo al siguiente de la pila.
             inicio = inicio.getSiguiente();
@@ -73,34 +65,33 @@ public class PilaEventos {
             tamanio--;
         }
     }
-
     /**
      * Consulta el valor del nodo que se encuentra en la cima de la pila
      *
      * @return valor del nodo.
      * @throws Exception
      */
-    public DatosEventos cima() throws Exception {
-        if (!esVacia()) {
+    public DatosEventos cima() throws Exception{
+        if(!esVacia()){
             return inicio.getValor();
         } else {
             throw new Exception("La pila se encuentra vacia.");
         }
     }
-
-    public boolean buscar(String referencia) {
+    public boolean buscar(String referencia){
         // Crea una copia de la pila.
         NodoPila aux = inicio;
         // Bandera para verificar si existe el elemento a buscar.
         boolean existe = false;
         // Recorre la pila hasta llegar encontrar el nodo o llegar al final
         // de la pila.
-        while (existe != true && aux != null) {
+        while(existe != true && aux != null){
             // Compara si el valor del nodo es igual que al de referencia.
             if (referencia.equals(aux.getValor())) {
                 // Cambia el valor de la bandera.
                 existe = true;
-            } else {
+            }
+            else{
                 // Avanza al siguiente nodo.
                 aux = aux.getSiguiente();
             }
@@ -108,36 +99,18 @@ public class PilaEventos {
         // Retorna el valor de la bandera.
         return existe;
     }
+    public ArrayList<NodoPila> listar(){
 
-    public ArrayList<NodoPila> listar() {
         ArrayList<NodoPila> listaDatos;
         listaDatos = new ArrayList<>();
 
         // Crea una copia de la pila.
         NodoPila aux = inicio;
         // Recorre la pila hasta el ultimo nodo.
-        while (aux != null) {
+        while(aux != null){
             listaDatos.add(aux);
             aux = aux.getSiguiente();
         }
         return listaDatos;
-    }
-
-    public ArrayList<NodoPila> listaras(){
-
-        System.out.println("Lista Eventos");
-        // Crea una copia de la pila.
-        NodoPila aux = inicio;
-        // Recorre la pila hasta el ultimo nodo.
-        while(aux != null){
-            System.out.println("|\t" + aux.getValor().getNombre() + "\t|");
-            System.out.println("|\t" + aux.getValor().getLugar() + "\t|");
-            System.out.println("|\t" + aux.getValor().getDia() + "\t|");
-            System.out.println("|\t" + aux.getValor().getHora() + "\t|");
-            System.out.println("|\t" + aux.getValor().getEspecificaciones() + "\t|");
-            System.out.println("-----------------");
-            aux = aux.getSiguiente();
-        }
-        return null;
     }
 }

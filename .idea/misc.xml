@@ -6,13 +6,15 @@
         <entry key="..\:/Users/USUARIO/Documents/GitHub/EntregaDos/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/USUARIO/Documents/GitHub/EntregaDos/app/src/main/res/layout/activity_menu_creacion_evento.xml" value="0.25" />
         <entry key="..\:/Users/USUARIO/Documents/GitHub/EntregaDos/app/src/main/res/layout/activity_menu_creacion_evento2.xml" value="0.25" />
-        <entry key="..\:/Users/USUARIO/Documents/GitHub/EntregaDos/app/src/main/res/layout/activity_menu_organizador.xml" value="0.15" />
+        <entry key="..\:/Users/USUARIO/Documents/GitHub/EntregaDos/app/src/main/res/layout/activity_menu_organizador.xml" value="0.1" />
         <entry key="..\:/Users/USUARIO/Documents/GitHub/EntregaDos/app/src/main/res/layout/activity_menu_usuario.xml" value="0.1641337386018237" />
-        <entry key="..\:/Users/USUARIO/Documents/GitHub/EntregaDos/app/src/main/res/layout/activity_menu_ver_evento.xml" value="0.1641337386018237" />
+        <entry key="..\:/Users/USUARIO/Documents/GitHub/EntregaDos/app/src/main/res/layout/activity_menu_ver_evento.xml" value="0.33" />
+        <entry key="..\:/Users/USUARIO/Documents/GitHub/EntregaDos/app/src/main/res/layout/activity_ver_evento.xml" value="0.1641337386018237" />
+        <entry key="..\:/Users/USUARIO/Documents/GitHub/EntregaDos/app/src/main/res/layout/item_list.xml" value="0.1" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
