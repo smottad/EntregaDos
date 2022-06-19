@@ -20,9 +20,6 @@
             android:name=".MenuVerEvento"
             android:exported="false" />
         <activity
-            android:name=".VerEvento"
-            android:exported="false" />
-        <activity
             android:name=".MenuParticipante"
             android:exported="false" />
         <activity

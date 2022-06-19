@@ -7,16 +7,16 @@
     android:orientation="vertical"
     tools:context=".MenuVerEvento">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Eventos" />
 
+    <TextView
+        android:layout_width="147dp"
+        android:layout_height="52dp"
+        android:text="Eventos" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerId"
-        android:layout_width="299dp"
-        android:layout_height="222dp"
+        android:layout_width="398dp"
+        android:layout_height="324dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.entregados.EstructurasDeDatos.ArbolesAVL.ArbolAVL;
 import com.example.entregados.EstructurasDeDatos.ColaUsuarios.ColaUsuarios;
 
 import com.example.entregados.EstructurasDeDatos.Usuarios.Participante;
@@ -15,7 +16,9 @@ public class MenuCrearUsuario extends AppCompatActivity {
     public EditText et1;
     public EditText et2;
     public EditText et3;
+    public EditText et4;
     public static ColaUsuarios cola;
+    public static ArbolAVL arbol = new ArbolAVL();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,7 @@ public class MenuCrearUsuario extends AppCompatActivity {
         et1 = findViewById(R.id.editTextTextPersonName5);
         et2 = findViewById(R.id.editTextTextPersonName7);
         et3 = findViewById(R.id.editTextTextPersonName8);
+        et4 = findViewById(R.id.editTextTextPersonName9);
     }
     @Override
     protected void onStart() {
@@ -55,11 +59,14 @@ public class MenuCrearUsuario extends AppCompatActivity {
         String Nombre = et1.getText().toString();
         String Edad = et2.getText().toString();
         String Genero = et3.getText().toString();
+        String ID = et4.getText().toString();
+        int ValorID = Integer.parseInt(ID);
 
 
         this.cola = new ColaUsuarios();
         Participante nuevoParticipante = new Participante(Nombre,Edad,Genero);
         cola.encolar(nuevoParticipante);
+        arbol.insertar(ValorID);
 
 
         Toast.makeText(this, "Usuario Aceptado", Toast.LENGTH_SHORT).show();
