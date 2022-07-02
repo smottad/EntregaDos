@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EntregaDos</string>
+    <string name="app_name">EventosUNAL</string>
     <string name="title_activity_menu_creacion_evento">MenuCreacionEvento</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

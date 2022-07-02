@@ -12,6 +12,8 @@ import com.example.entregados.EstructurasDeDatos.ColaUsuarios.ColaUsuarios;
 
 import com.example.entregados.EstructurasDeDatos.Usuarios.Participante;
 
+import java.util.HashMap;
+
 public class MenuCrearUsuario extends AppCompatActivity {
     public EditText et1;
     public EditText et2;
@@ -19,6 +21,7 @@ public class MenuCrearUsuario extends AppCompatActivity {
     public EditText et4;
     public static ColaUsuarios cola;
     public static ArbolAVL arbol = new ArbolAVL();
+    public static HashMap<Integer, Participante> hashMap = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +68,8 @@ public class MenuCrearUsuario extends AppCompatActivity {
 
         this.cola = new ColaUsuarios();
         Participante nuevoParticipante = new Participante(Nombre,Edad,Genero);
+        hashMap.put(ValorID, nuevoParticipante);
+
         cola.encolar(nuevoParticipante);
         arbol.insertar(ValorID);
 
